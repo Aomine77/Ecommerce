@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal E-commerce</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">BRAND</div>
+            <ul class="nav-links">
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-button" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="icon-button" id="wishlistBtn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="icon-button" id="cartBtn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="auth-buttons" id="authButtons">
+                    <a href="login.html" class="login-link">Login</a>
+                </div>
+                <div class="user-menu hidden" id="userMenu">
+                    <button class="icon-button" id="userBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#profile">Profile</a>
+                        <a href="#orders">Orders</a>
+                        <button id="logoutBtn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Discover Our Collection</h1>
+            <p>Clean. Minimal. Essential.</p>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div class="filters">
+                <button class="filter-button active">All</button>
+                <button class="filter-button">New</button>
+                <button class="filter-button">Popular</button>
+                <button class="filter-button">Sale</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cartContent" class="cart-content">
+            <!-- Cart items will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <!-- Modal content will be dynamically inserted -->
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
