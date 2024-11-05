@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Minimal E-commerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f8f8;
+            padding: 2rem;
+        }
+
+        .login-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .login-header .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.5rem;
+            color: #000;
+        }
+
+        .login-header h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .form-group input {
+            padding: 0.875rem 1rem;
+            border: 1.5px solid #eee;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            background: #fafafa;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #000;
+            background: white;
+        }
+
+        .login-button {
+            background: #000;
+            color: white;
+            padding: 1rem;
+            border: 2px solid #000;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+
+        .login-button:hover {
+            background: white;
+            color: #000;
+        }
+
+        .social-login {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-button {
+            width: 48px;
+            height: 48px;
+            border: 1.5px solid #eee;
+            border-radius: 12px;
+            background: white;
+            color: #666;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-button:hover {
+            border-color: #000;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .login-footer a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+
+        ::placeholder {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <div class="logo">BRAND</div>
+                <h2>Create account</h2>
+            </div>
+            <form class="login-form" id="signupForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+                </div>
+                <button type="submit" class="login-button">Create account</button>
+                <div class="social-login">
+                    <button type="button" class="social-button">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button type="button" class="social-button">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button type="button" class="social-button">
+                        <i class="fab fa-apple"></i>
+                    </button>
+                </div>
+            </form>
+            <div class="login-footer">
+                Already have an account? <a href="login.html">Sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html> 
